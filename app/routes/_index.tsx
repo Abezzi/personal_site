@@ -1,5 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import Navbar from "../components/Navbar";
+import Profile from "~/components/Profile";
+import Me from "/brand.png"
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,11 +12,15 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+    <div>
       <Navbar />
-      <h1 className="text-3xl font-bold underline">
-        Bienvenido
-      </h1>
+      <Profile
+        imageSrc={Me}
+        name="Alex Herrera"
+        description="Developer who loves to acquire as many skills as possible, following the direction of circumstances that impose my deepest interest in the world of technology."
+        width={128}
+        height={128}
+      />
     </div>
   );
 }

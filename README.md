@@ -1,6 +1,6 @@
 # Information
 
-- This is the code of my personal site click [here](www.alexherrera.cl) to check it out
+- This is the code of my personal site click [here](https://www.alexherrera.cl) to check it out
 
 # Welcome to Remix!
 

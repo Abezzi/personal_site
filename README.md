@@ -1,3 +1,7 @@
+# Information
+
+- This is the code of my personal site click [here](www.alexherrera.cl) to check it out
+
 # Welcome to Remix!
 
 - [Remix Docs](https://remix.run/docs)

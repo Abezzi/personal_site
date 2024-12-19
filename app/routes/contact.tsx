@@ -1,19 +1,17 @@
 import type { MetaFunction } from "@remix-run/node";
-import Navbar from "../components/Navbar";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Alex Herrera | Developer" },
-    { name: "description", content: "Welcome to my site" },
+    { title: "Contact | Alex Herrera" },
+    { name: "contact information", content: "your email and message to Alex" },
   ];
 };
 
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <Navbar />
       <h1 className="text-3xl font-bold underline">
-        Bienvenido
+        Contact page
       </h1>
     </div>
   );

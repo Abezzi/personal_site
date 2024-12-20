@@ -83,7 +83,7 @@ export default function Navbar() {
             <DisclosurePanel className="sm:hidden ">
               <div className="px-6 pt-2 pb-3 space-y-1 font-semibold text-black">
                 <NavbarMenuItem
-                  to="/blog"
+                  to="/articles"
                   activeExtraClass="font-semibold text-black bg-zinc-500"
                 >
                   Articles
@@ -91,7 +91,7 @@ export default function Navbar() {
                 <NavbarMenuItem to="/projects" activeExtraClass=" font-semibold text-black bg-zinc-500">
                   Projects
                 </NavbarMenuItem>
-                <NavbarMenuItem to="/contactme" activeExtraClass="font-semibold text-black bg-zinc-500 ">
+                <NavbarMenuItem to="/contact" activeExtraClass="font-semibold text-black bg-zinc-500 ">
                   Contact Me
                 </NavbarMenuItem>
               </div>

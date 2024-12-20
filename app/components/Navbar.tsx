@@ -1,4 +1,4 @@
-import { Disclosure } from "@headlessui/react";
+import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { Link } from "@remix-run/react";
 import { motion } from "framer-motion";
 import DarkThemeButton from "./DarkThemeButton";
@@ -73,14 +73,14 @@ export default function Navbar() {
                   <DarkThemeButton />
                   <GitHubButton />
 
-                  <Disclosure.Button className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset">
+                  <DisclosureButton className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset">
                     <MenuButtonIcon isOpen={open} />
-                  </Disclosure.Button>
+                  </DisclosureButton>
                 </div>
               </div>
             </div>
 
-            <Disclosure.Panel className="sm:hidden ">
+            <DisclosurePanel className="sm:hidden ">
               <div className="px-6 pt-2 pb-3 space-y-1 font-semibold text-black">
                 <NavbarMenuItem
                   to="/blog"
@@ -95,7 +95,7 @@ export default function Navbar() {
                   Contact Me
                 </NavbarMenuItem>
               </div>
-            </Disclosure.Panel>
+            </DisclosurePanel>
           </>
         )}
       </Disclosure>

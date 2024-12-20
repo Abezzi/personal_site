@@ -1,9 +1,6 @@
 import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node"
 import { ReactNode } from "react"
 import stylesheet from "~/tailwind.css?url";
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: stylesheet },
-];
 import {
   Links,
   Meta,
@@ -15,6 +12,10 @@ import {
 import { PreventFlashOnWrongTheme, ThemeProvider, useTheme } from "remix-themes"
 import { darkSessionResolver } from "./utils/session.server";
 import Navbar from "./components/Navbar";
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: stylesheet },
+];
 
 // use a loader in order to get data
 export async function loader({ request }: LoaderFunctionArgs) {
@@ -50,7 +51,7 @@ function App() {
         <PreventFlashOnWrongTheme ssrTheme={Boolean(theme)} />
         <Links />
       </head>
-      <body>
+      <body className="bg-white text-black dark:bg-black dark:text-white">
         <Layout>
           <Outlet />
           <ScrollRestoration />

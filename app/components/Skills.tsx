@@ -9,7 +9,6 @@ type SkillAndLevel = {
   level: string,
 }
 
-
 const languages: SkillAndLevel[] = [
   { skill: "C/C++", level: ADVANCED },
   { skill: "Python", level: INTERMEDIATE },
@@ -26,6 +25,7 @@ const languages: SkillAndLevel[] = [
 const databases: SkillAndLevel[] = [
   { skill: "PostgreSQL", level: ADVANCED },
   { skill: "MySQL", level: ADVANCED },
+  { skill: "MongoDB", level: BEGINNER },
   { skill: "OracleDB", level: BEGINNER },
 ]
 

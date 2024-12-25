@@ -13,7 +13,7 @@ interface SkillCardProps {
 function SkillCard({ header, languages }: SkillCardProps) {
 
   const SkillLevelList = languages.map((item, index) => (
-    <li key={index} className="flex justify-between">
+    <li className="flex justify-between dark:hover:bg-slate-900 hover:bg-slate-200" key={index}>
       <span>{item.skill}</span>
       <span className="eading-normal tracking-tight dark:text-slate-400 text-slate-700">{item.level}</span>
     </li>

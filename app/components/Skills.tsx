@@ -39,7 +39,7 @@ export default function Skills() {
       <h1 className="tracking-tighter font-bold dark:text-slate-300 text-slate-800 text-3xl md:text-4xl mx-auto m-6">
         Skills
       </h1>
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
         <SkillCard header="Programming Languages" languages={languages} />
         <SkillCard header="Data Base related" languages={databases} />
         <SkillCard header="Others" languages={others} />

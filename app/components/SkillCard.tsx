@@ -13,7 +13,7 @@ interface SkillCardProps {
 function SkillCard({ header, languages }: SkillCardProps) {
 
   const SkillLevelList = languages.map((item, index) => (
-    <li key={index}>{`${item.skill} - ${item.level}`}</li>
+    <li key={index}>{`${item.skill} • ${item.level}`}</li>
   ));
 
   return (

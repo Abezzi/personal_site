@@ -14,11 +14,13 @@ const languages: SkillAndLevel[] = [
   { skill: "C/C++", level: ADVANCED },
   { skill: "Python", level: INTERMEDIATE },
   { skill: "Go", level: INTERMEDIATE },
+  { skill: "PHP", level: INTERMEDIATE },
   { skill: "React", level: INTERMEDIATE },
   { skill: "Typescript", level: INTERMEDIATE },
   { skill: "Javascript", level: INTERMEDIATE },
-  { skill: "Java", level: INTERMEDIATE },
-  { skill: "Rust", level: INTERMEDIATE },
+  { skill: "NodeJS", level: INTERMEDIATE },
+  { skill: "Java", level: BEGINNER },
+  { skill: "Rust", level: BEGINNER },
 ]
 
 const databases: SkillAndLevel[] = [
@@ -29,8 +31,13 @@ const databases: SkillAndLevel[] = [
 
 const others: SkillAndLevel[] = [
   { skill: "Linux", level: ADVANCED },
-  { skill: "Latex", level: ADVANCED },
-  { skill: "Office/Excel/PowerPoint", level: INTERMEDIATE },
+  { skill: "Navicat", level: INTERMEDIATE },
+  { skill: "LateX", level: ADVANCED },
+  { skill: "Microsoft Office", level: INTERMEDIATE },
+  { skill: "Microsoft Excel", level: INTERMEDIATE },
+  { skill: "Microsoft PowerPoint", level: INTERMEDIATE },
+  { skill: "Canvas", level: INTERMEDIATE },
+  { skill: "GIMP/Photoshop", level: INTERMEDIATE },
 ]
 
 export default function Skills() {

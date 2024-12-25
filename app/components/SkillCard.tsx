@@ -13,15 +13,20 @@ interface SkillCardProps {
 function SkillCard({ header, languages }: SkillCardProps) {
 
   const SkillLevelList = languages.map((item, index) => (
-    <li key={index}>{`${item.skill} • ${item.level}`}</li>
+    <li key={index} className="flex justify-between">
+      <span>{item.skill}</span>
+      <span className="eading-normal tracking-tight dark:text-slate-400 text-slate-700">{item.level}</span>
+    </li>
   ));
 
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+    <div className="flex flex-col max-w-sm rounded overflow-hidden shadow-lg">
       <h1 className="tracking-tighter font-bold dark:text-slate-300 text-slate-800 text-2xl md:text-3xl mx-auto m-6">{header}</h1>
-      <ul className="mb-2">{SkillLevelList}</ul>
+      <ul className="flex-auto m-4">{SkillLevelList}</ul>
     </div>
   );
 }
 
 export default SkillCard
+{/*
+*/}

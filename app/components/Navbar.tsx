@@ -3,6 +3,7 @@ import { Link } from "@remix-run/react";
 import { motion } from "framer-motion";
 import DarkThemeButton from "./DarkThemeButton";
 import { GitHubButton, MenuButtonIcon, NavbarMenuItem } from "./NavbarPartials";
+import { LinkedinButton } from "./LinkedinButton";
 
 const imageVariants = {
   initial: { scale: 1 },
@@ -48,6 +49,7 @@ export default function Navbar() {
                   {/*switch between dark and light mode*/}
                   <DarkThemeButton />
 
+                  <LinkedinButton />
                   <button>
                     <a href="https://github.com/Abezzi" target="_blank" rel="noreferrer" aria-label="View GitHub Profile">
                       <motion.svg
@@ -69,9 +71,11 @@ export default function Navbar() {
                     </a>
                   </button>
                 </div>
+                {/* small screen */}
                 <div className="sm:hidden flex items-center space-x-4">
                   <DarkThemeButton />
                   <GitHubButton />
+                  <LinkedinButton />
 
                   <DisclosureButton className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset">
                     <MenuButtonIcon isOpen={open} />

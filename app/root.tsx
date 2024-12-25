@@ -41,10 +41,6 @@ function App() {
     <html lang="en" data-theme={dTheme ?? ''}>
       <head>
         <meta charSet="utf-8" />
-        <meta
-          name="description"
-          content="portfolio information"
-        />
         <title>Alex Herrera | Developer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />

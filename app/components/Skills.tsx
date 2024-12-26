@@ -31,7 +31,11 @@ const databases: SkillAndLevel[] = [
 
 const others: SkillAndLevel[] = [
   { skill: "Linux", level: ADVANCED },
+  { skill: "tailwindcss", level: INTERMEDIATE },
+  { skill: "HTML/CSS", level: INTERMEDIATE },
   { skill: "Navicat", level: INTERMEDIATE },
+  { skill: "Remix Framework", level: INTERMEDIATE },
+  { skill: "Netlify", level: INTERMEDIATE },
   { skill: "LateX", level: ADVANCED },
   { skill: "Microsoft Office", level: INTERMEDIATE },
   { skill: "Microsoft Excel", level: INTERMEDIATE },

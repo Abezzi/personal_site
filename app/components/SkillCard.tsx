@@ -8,8 +8,6 @@ interface SkillCardProps {
   languages: SkillAndLevel[],
 }
 
-
-
 function SkillCard({ header, languages }: SkillCardProps) {
 
   const SkillLevelList = languages.map((item, index) => (
@@ -28,5 +26,3 @@ function SkillCard({ header, languages }: SkillCardProps) {
 }
 
 export default SkillCard
-{/*
-*/}

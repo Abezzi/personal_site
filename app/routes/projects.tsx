@@ -28,7 +28,9 @@ export default function Index() {
       </h1>
       <div className="m-2">
         <ProjectCard header="Porfolio Website" content="The main goal of this project is showcase the abilities as a frontend developer deploying real world applications. This site project was created using the remix framework, react with typescript, tailwindcss for the style, hosted on netlify. The backend is an API made with flask hosted in _." imageSrc="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.freepik.com%2Fpremium-vector%2Fwatermelon-vector-pencil-ink-sketch-drawing-black-white-monochrome-engraving-style_1075459-15258.jpg&f=1&nofb=1&ipt=3165af76fa8a702d5c6aafb19f9013803af7145685a441e46401db722abc6c44&ipo=images" date="" repoLink="https://github.com/Abezzi/personal_site" tags={tags} />
+        {/*
         <ProjectCard header="Restaurant (WIP)" content="lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum" imageSrc="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.freepik.com%2Fpremium-vector%2Fwatermelon-vector-pencil-ink-sketch-drawing-black-white-monochrome-engraving-style_1075459-15258.jpg&f=1&nofb=1&ipt=3165af76fa8a702d5c6aafb19f9013803af7145685a441e46401db722abc6c44&ipo=images" date="" repoLink="https://github.com/Abezzi/personal_site" tags={tags} />
+          */}
       </div>
     </div>
   );

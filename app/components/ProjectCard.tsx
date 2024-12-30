@@ -25,7 +25,7 @@ function ProjectCard({ header, content, date, imageSrc, repoLink, tags }: Projec
   return (
     <div className="border rounded p-4 mb-2">
       <h2 className="text-2xl font-bold">{header}
-        <a className="text-slate-700 dark:text-slate-300" href={repoLink}> &lt;Github&gt;</a>
+        <a className="text-slate-700 dark:text-slate-300" href={repoLink} target="_blank"> &lt;Github&gt;</a>
       </h2>
       <p className="text-gray-500 mb-4">{date}</p>
 

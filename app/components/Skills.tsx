@@ -33,6 +33,7 @@ const others: SkillAndLevel[] = [
   { skill: "Linux", level: ADVANCED },
   { skill: "tailwindcss", level: INTERMEDIATE },
   { skill: "HTML/CSS", level: INTERMEDIATE },
+  { skill: "TypeORM", level: INTERMEDIATE },
   { skill: "Navicat", level: INTERMEDIATE },
   { skill: "Remix Framework", level: INTERMEDIATE },
   { skill: "Netlify", level: INTERMEDIATE },

@@ -7,7 +7,7 @@ import Experience from "~/components/Experience";
 export const meta: MetaFunction = () => {
   return [
     { title: "Alex Herrera | Developer" },
-    { name: "description", content: "quote for the site, job experience and skills, everything is in black and white" },
+    { name: "description", content: "quote for the site, job experience and skills" },
   ];
 };
 
@@ -21,7 +21,9 @@ export default function Index() {
         width={128}
         height={128}
       />
+      {/*
       <Experience />
+        */}
       <Skills />
     </div>
   );

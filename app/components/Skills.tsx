@@ -31,6 +31,7 @@ const databases: SkillAndLevel[] = [
 
 const others: SkillAndLevel[] = [
   { skill: "Linux", level: ADVANCED },
+  { skill: "Docker", level: INTERMEDIATE },
   { skill: "tailwindcss", level: INTERMEDIATE },
   { skill: "HTML/CSS", level: INTERMEDIATE },
   { skill: "TypeORM", level: INTERMEDIATE },

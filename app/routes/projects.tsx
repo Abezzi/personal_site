@@ -29,6 +29,7 @@ export default function Index() {
           header="Porfolio Website"
           content="The main goal of this project is showcase the abilities as a frontend developer deploying real world applications. This site project was created using the remix framework, react with typescript, tailwindcss for the style, hosted on netlify. The backend is an API made with flask hosted in AWS"
           imageSrc="../../public/ss.png"
+          alt="screenshot of this website"
           date=""
           repoLink="https://github.com/Abezzi/personal_site"
           tags={tags}

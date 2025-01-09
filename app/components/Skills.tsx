@@ -1,36 +1,37 @@
 import SkillCard from "./SkillCard";
 
-const ADVANCED = "Advanced"
-const INTERMEDIATE = "Intermediate"
-const BEGINNER = "Beginner "
+const ADVANCED = "Advanced";
+const INTERMEDIATE = "Intermediate";
+const BEGINNER = "Beginner ";
 
 type SkillAndLevel = {
-  skill: string,
-  level: string,
-}
+  skill: string;
+  level: string;
+};
 
 const languages: SkillAndLevel[] = [
   { skill: "C/C++", level: ADVANCED },
-  { skill: "Python", level: INTERMEDIATE },
+  { skill: "Python", level: ADVANCED },
+  { skill: "React", level: ADVANCED },
   { skill: "Go", level: INTERMEDIATE },
   { skill: "PHP", level: INTERMEDIATE },
-  { skill: "React", level: INTERMEDIATE },
   { skill: "Typescript", level: INTERMEDIATE },
   { skill: "Javascript", level: INTERMEDIATE },
   { skill: "NodeJS", level: INTERMEDIATE },
   { skill: "Java", level: BEGINNER },
   { skill: "Rust", level: BEGINNER },
-]
+];
 
 const databases: SkillAndLevel[] = [
   { skill: "PostgreSQL", level: ADVANCED },
   { skill: "MySQL", level: ADVANCED },
   { skill: "MongoDB", level: BEGINNER },
   { skill: "OracleDB", level: BEGINNER },
-]
+];
 
 const others: SkillAndLevel[] = [
   { skill: "Linux", level: ADVANCED },
+  { skill: "Django", level: ADVANCED },
   { skill: "Docker", level: INTERMEDIATE },
   { skill: "tailwindcss", level: INTERMEDIATE },
   { skill: "HTML/CSS", level: INTERMEDIATE },
@@ -44,7 +45,7 @@ const others: SkillAndLevel[] = [
   { skill: "Microsoft PowerPoint", level: INTERMEDIATE },
   { skill: "Canvas", level: INTERMEDIATE },
   { skill: "GIMP/Photoshop", level: INTERMEDIATE },
-]
+];
 
 export default function Skills() {
   return (

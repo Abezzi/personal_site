@@ -27,9 +27,8 @@ export default function Index() {
       {/*
       <Experience />
       */}
-      {/*
-<p className="text-center bg-yellow-200">SITE IN CONSTRUCTION</p>
-        */}
+      <p className="text-center bg-yellow-200">SITE IN CONSTRUCTION</p>
+      {/* */}
       <Skills />
     </div>
   );

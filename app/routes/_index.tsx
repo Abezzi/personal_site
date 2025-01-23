@@ -1,7 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import Profile from "~/components/Profile";
 import Skills from "~/components/Skills";
-import Me from "/brand.png";
+import Me from "/me.png";
 import Experience from "~/components/Experience";
 
 export const meta: MetaFunction = () => {

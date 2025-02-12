@@ -1,4 +1,8 @@
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
 import { Link } from "@remix-run/react";
 import { motion } from "framer-motion";
 import DarkThemeButton from "./DarkThemeButton";
@@ -26,24 +30,28 @@ export default function Navbar() {
                 <div className="hidden sm:flex space-x-8 items-center">
                   {/*navlink gives an active state*/}
                   <nav className="flex justify-center space-x-10 py-4">
+                    {/*
                     <a
                       href="/articles"
                       className="text-black font-semibold dark:text-white"
                     >
                       Articles
                     </a>
+                    */}
                     <a
                       href="/projects"
                       className="text-black font-semibold dark:text-white"
                     >
                       Projects
                     </a>
+                    {/*
                     <a
                       href="/contact"
                       className="text-black font-semibold dark:text-white"
                     >
                       Contact Me
                     </a>
+                    */}
                   </nav>
 
                   {/*switch between dark and light mode*/}
@@ -51,7 +59,12 @@ export default function Navbar() {
 
                   <LinkedinButton />
                   <button>
-                    <a href="https://github.com/Abezzi" target="_blank" rel="noreferrer" aria-label="View GitHub Profile">
+                    <a
+                      href="https://github.com/Abezzi"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="View GitHub Profile"
+                    >
                       <motion.svg
                         viewBox="0 0 16 16"
                         fill="currentColor"
@@ -86,18 +99,28 @@ export default function Navbar() {
 
             <DisclosurePanel className="sm:hidden ">
               <div className="px-6 pt-2 pb-3 space-y-1 font-semibold text-black">
+                {/*
                 <NavbarMenuItem
                   to="/articles"
                   activeExtraClass="font-semibold text-black bg-zinc-500"
                 >
                   Articles
                 </NavbarMenuItem>
-                <NavbarMenuItem to="/projects" activeExtraClass=" font-semibold text-black bg-zinc-500">
+                */}
+                <NavbarMenuItem
+                  to="/projects"
+                  activeExtraClass=" font-semibold text-black bg-zinc-500"
+                >
                   Projects
                 </NavbarMenuItem>
-                <NavbarMenuItem to="/contact" activeExtraClass="font-semibold text-black bg-zinc-500 ">
+                {/*
+                <NavbarMenuItem
+                  to="/contact"
+                  activeExtraClass="font-semibold text-black bg-zinc-500 "
+                >
                   Contact Me
                 </NavbarMenuItem>
+                */}
               </div>
             </DisclosurePanel>
           </>

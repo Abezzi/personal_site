@@ -4,7 +4,7 @@
 
 # Screenshot
 
-![Screenshot of the website](public/ss.png "Screenshot")
+![Screenshot of the website](public/ss0.png "Screenshot")
 
 # Welcome to Remix!
 

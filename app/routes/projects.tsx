@@ -14,10 +14,23 @@ type tag = {
 };
 
 const tags: tag[] = [
-  { text: "react", color: "blue" },
-  { text: "python", color: "green" },
-  { text: "remix", color: "red" },
-  { text: "netlify", color: "yellow" },
+  { text: "React", color: "blue" },
+  { text: "Python", color: "green" },
+  { text: "Remix", color: "red" },
+  { text: "Netlify", color: "yellow" },
+];
+
+const tags_blango: tag[] = [
+  { text: "Django", color: "green" },
+  { text: "RestfulAPI", color: "green" },
+];
+
+const tags_restaurant: tag[] = [
+  { text: "React", color: "blue" },
+  { text: "Typescript", color: "blue" },
+  { text: "Django", color: "green" },
+  { text: "RestfulAPI", color: "yellow" },
+  { text: "Docker", color: "blue" },
 ];
 
 export default function Index() {
@@ -27,16 +40,31 @@ export default function Index() {
       <div className="m-2">
         <ProjectCard
           header="Porfolio Website"
-          content="The main goal of this project is showcase the abilities as a frontend developer deploying real world applications. This site project was created using the remix framework, react with typescript, tailwindcss for the style, hosted on netlify. The backend is an API made with flask hosted in AWS"
+          content="The main goal of this project is showcase the abilities as a frontend developer deploying real world applications. This site project was created using the remix framework, react with typescript, tailwindcss for the style, hosted on netlify. The backend is an API made with django framework."
           imageSrc="https://github.com/Abezzi/personal_site/blob/main/public/ss.png?raw=true"
           alt="screenshot of this website"
           date=""
           repoLink="https://github.com/Abezzi/personal_site"
           tags={tags}
         />
-        {/*
-        <ProjectCard header="Restaurant (WIP)" content="lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum" imageSrc="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.freepik.com%2Fpremium-vector%2Fwatermelon-vector-pencil-ink-sketch-drawing-black-white-monochrome-engraving-style_1075459-15258.jpg&f=1&nofb=1&ipt=3165af76fa8a702d5c6aafb19f9013803af7145685a441e46401db722abc6c44&ipo=images" date="" repoLink="https://github.com/Abezzi/personal_site" tags={tags} />
-          */}
+        <ProjectCard
+          header="(WIP) Django Blog (blango)"
+          content="A simple blog made with django, used 12 factor, authentication and authorization, part of the coursera course Advanced Django: Mastering Django and Django Rest Framework by Codio"
+          imageSrc="https://github.com/Abezzi/personal_site/blob/main/public/ss.png?raw=true"
+          alt="screenshot of django blog project"
+          date=""
+          repoLink="https://github.com/Abezzi/blango"
+          tags={tags_blango}
+        />
+        <ProjectCard
+          header="(WIP) Restaurant SaaS"
+          content="Restaurant system to showcase all the skills together in a unified project, monorepo"
+          imageSrc="https://github.com/Abezzi/personal_site/blob/main/public/ss.png?raw=true"
+          alt="screenshot of django blog project"
+          date=""
+          repoLink="https://github.com/Abezzi/blango"
+          tags={tags_restaurant}
+        />
       </div>
     </div>
   );

@@ -1,3 +1,6 @@
+import React, { useState } from "react";
+import Modal from "./Modal";
+
 interface ProjectCardProps {
   alt: string;
   content: string;
@@ -36,6 +39,16 @@ function ProjectCard({
     </div>
   ));
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleImageClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="border rounded p-4 mb-2">
       <h2 className="text-2xl font-bold">
@@ -44,6 +57,7 @@ function ProjectCard({
           className="text-slate-700 dark:text-slate-300"
           href={repoLink}
           target="_blank"
+          rel="noopener noreferrer"
         >
           {" "}
           &lt;Github&gt;
@@ -51,11 +65,23 @@ function ProjectCard({
       </h2>
       <p className="text-gray-500 mb-4">{date}</p>
 
-      <div className="flex">
-        <img src={imageSrc} alt={alt} className="w-1/3 rounded mr-4" />
-        <p className="text-base">{content}</p>
+      <div className="grid md:grid-cols-3 gap-4">
+        <div className="margin autofill">
+          <img
+            src={imageSrc}
+            alt={alt}
+            className="rounded mr-4"
+            onClick={handleImageClick}
+          />
+        </div>
+        <div className="col-span-2">
+          <p className="text-base text-justify">{content}</p>
+        </div>
       </div>
       <div className="flex flex-wrap-gap-2">{tagList}</div>
+
+      {/* Modal */}
+      <Modal isOpen={isModalOpen} onClose={closeModal} imageSrc={imageSrc} />
     </div>
   );
 }

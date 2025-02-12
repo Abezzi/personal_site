@@ -20,6 +20,12 @@ const tags: tag[] = [
   { text: "Netlify", color: "yellow" },
 ];
 
+const tags_booking: tag[] = [
+  { text: "Javascript", color: "red" },
+  { text: "Django", color: "green" },
+  { text: "MySQL", color: "blue" },
+];
+
 const tags_blango: tag[] = [
   { text: "Django", color: "green" },
   { text: "RestfulAPI", color: "green" },
@@ -33,7 +39,7 @@ const tags_restaurant: tag[] = [
   { text: "Docker", color: "blue" },
 ];
 
-export default function Index() {
+export default function Projects() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <h1 className="text-3xl font-bold underline">Projects</h1>
@@ -46,6 +52,15 @@ export default function Index() {
           date=""
           repoLink="https://github.com/Abezzi/personal_site"
           tags={tags}
+        />
+        <ProjectCard
+          header="Booking App"
+          content="Simple booking app that stores client reservation for the little lemon restaurant appointments, using django and javascript. This was made during the Fullstack course by Meta."
+          imageSrc="https://github.com/Abezzi/booking/blob/main/static/img/public/ss1.png?raw=true"
+          alt="screenshot of booking website"
+          date=""
+          repoLink="https://github.com/Abezzi/booking"
+          tags={tags_booking}
         />
         <ProjectCard
           header="(WIP) Django Blog (blango)"

@@ -63,7 +63,7 @@ export default function Projects() {
           tags={tags_booking}
         />
         <ProjectCard
-          header="(WIP) Django Blog (blango)"
+          header="Django Blog (blango)"
           content="A simple blog made with django, used 12 factor, authentication and authorization, part of the coursera course Advanced Django: Mastering Django and Django Rest Framework by Codio"
           imageSrc="https://github.com/Abezzi/personal_site/blob/main/public/ss0.png?raw=true"
           alt="screenshot of django blog project"
@@ -72,12 +72,12 @@ export default function Projects() {
           tags={tags_blango}
         />
         <ProjectCard
-          header="(WIP) Restaurant SaaS"
-          content="Restaurant system to showcase all the skills together in a unified project, monorepo"
-          imageSrc="https://github.com/Abezzi/personal_site/blob/main/public/ss0.png?raw=true"
+          header="(CurrentProject) Restaurant FullStack SaaS"
+          content="This is a fullstack project, with React and typescript in the frontend and python with django in the backend for the API, the database is in postgresql inside a docker container, private repository for now."
+          imageSrc="https://i.imgur.com/XdVcpxv.png"
           alt="screenshot of django blog project"
           date=""
-          repoLink="https://github.com/Abezzi/blango"
+          repoLink=""
           tags={tags_restaurant}
         />
       </div>

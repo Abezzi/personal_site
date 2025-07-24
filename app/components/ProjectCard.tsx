@@ -8,7 +8,7 @@ interface ProjectCardProps {
   header: string;
   imageSrc: string;
   repoLink?: string;
-  tags: tag[];
+  tags: string[];
 }
 
 type tag = {
@@ -30,11 +30,11 @@ function ProjectCard({
       <button
         className={
           "font-semibold py-1 px-2 rounded-lg text-sm underline decoration-2 decoration-" +
-          item.color +
+          item +
           "-500"
         }
       >
-        {item.text}
+        {item}
       </button>
     </div>
   ));
@@ -74,9 +74,10 @@ function ProjectCard({
             onClick={handleImageClick}
           />
         </div>
-        <div className="col-span-2">
-          <p className="text-base text-justify">{content}</p>
-        </div>
+        <div
+          className="col-span-2 text-base text-justify"
+          dangerouslySetInnerHTML={{ __html: content }}
+        ></div>
       </div>
       <div className="flex flex-wrap-gap-2">{tagList}</div>
 

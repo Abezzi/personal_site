@@ -2,6 +2,21 @@
 
 - This is the code of my personal site click [here](https://www.alexherrera.cl) to check it out
 
+# What it does
+
+This responsive portfolio website is a professional showcase of my work as a full-stack developer. It acts as a central hub where visitors can explore my projects, technical skills, and professional background. With a clean, minimalistic design, the site enables users to view detailed project descriptions, access source code for select projects, and connect with me via email or LinkedIn. It also highlights my programming expertise and provides access to my curriculum vitae.
+
+# Why I built it
+
+I developed this portfolio website to demonstrate my ability to create a polished, user-friendly web application from the ground up. It serves as a dynamic representation of my technical skills and passion for building impactful solutions. By designing and deploying this site, I aimed to provide a seamless way for potential employers and clients to understand my capabilities and get in touch.
+
+# Tech Stack
+
+- Front-End: Remix framework, React, TypeScript, Tailwind CSS for responsive styling
+- Back-End: Neon, a serverless open-source PostgreSQL database
+- Deployment: Hosted on Netlify with CI/CD integration via GitHub for streamlined deployments
+- Version Control: Git, GitHub for source code management
+
 # Screenshot
 
 ![Screenshot of the website](public/ss0.png "Screenshot")

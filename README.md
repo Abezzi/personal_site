@@ -12,10 +12,10 @@ I developed this portfolio website to demonstrate my ability to create a polishe
 
 # Tech Stack
 
-- Front-End: Remix framework, React, TypeScript, Tailwind CSS for responsive styling
-- Back-End: Neon, a serverless open-source PostgreSQL database
-- Deployment: Hosted on Netlify with CI/CD integration via GitHub for streamlined deployments
-- Version Control: Git, GitHub for source code management
+- Front-End: Remix framework, React, TypeScript, Tailwind CSS for responsive styling.
+- Back-End: Neon, a serverless open-source PostgreSQL database.
+- Deployment: Hosted on Netlify with CI/CD integration via GitHub for streamlined deployments.
+- Version Control: Git, GitHub for source code management.
 
 # Screenshot
 

@@ -1,10 +1,12 @@
 import type { MetaFunction } from "@remix-run/node";
 import Profile from "~/components/Profile";
 import Skills from "~/components/Skills";
+import Socials from "~/components/Socials";
 import Me from "/me.png";
+import About from "~/components/About";
 // import Experience from "~/components/Experience";
 
-const wip = true;
+const wip = false;
 export const meta: MetaFunction = () => {
   return [
     { title: "Alex Herrera | Developer" },
@@ -17,7 +19,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="divide-y divide-dashed">
+    <div className="">
       <Profile
         imageSrc={Me}
         name="Alex Herrera"
@@ -25,6 +27,8 @@ export default function Index() {
         width={128}
         height={128}
       />
+      <Socials />
+      <About />
       {/*
       <Experience />
       */}

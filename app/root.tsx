@@ -1,5 +1,5 @@
-import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node"
-import { ReactNode } from "react"
+import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
+import { ReactNode } from "react";
 import stylesheet from "~/tailwind.css?url";
 import {
   Links,
@@ -9,9 +9,14 @@ import {
   ScrollRestoration,
   useLoaderData,
 } from "@remix-run/react";
-import { PreventFlashOnWrongTheme, ThemeProvider, useTheme } from "remix-themes"
+import {
+  PreventFlashOnWrongTheme,
+  ThemeProvider,
+  useTheme,
+} from "remix-themes";
 import { darkSessionResolver } from "./utils/session.server";
 import Navbar from "./components/Navbar";
+import { ParticlesBackground } from "./components/ParticlesBackground";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -38,7 +43,7 @@ function App() {
   const { theme } = useLoaderData<typeof loader>();
   const [dTheme] = useTheme();
   return (
-    <html lang="en" data-theme={dTheme ?? ''}>
+    <html lang="en" data-theme={dTheme ?? ""}>
       <head>
         <meta charSet="utf-8" />
         <title>Alex Herrera | Developer</title>
@@ -49,6 +54,7 @@ function App() {
       </head>
       <body className="bg-white text-black dark:bg-black dark:text-white">
         <Layout>
+          <ParticlesBackground />
           <Outlet />
           <ScrollRestoration />
           <Scripts />
@@ -65,6 +71,6 @@ function Layout({ children }: { children: ReactNode }) {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 mt-5">
         {children}
       </main>
-    </div >
+    </div>
   );
 }

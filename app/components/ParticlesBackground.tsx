@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import type { ISourceOptions, MoveDirection } from "@tsparticles/engine";
+import type { ISourceOptions } from "@tsparticles/engine";
 
 export const ParticlesBackground = () => {
   const [init, setInit] = useState(false);
@@ -33,8 +33,7 @@ export const ParticlesBackground = () => {
         move: {
           enable: true,
           speed: 1,
-          direction: "none" as const, // <- correct literal
-          // direction: MoveDirection.none,         // <- alternative (enum)
+          direction: "none" as const,
           random: false,
           straight: false,
           outModes: { default: "bounce" as const },

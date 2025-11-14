@@ -79,7 +79,18 @@ function ProjectCard({
           dangerouslySetInnerHTML={{ __html: content }}
         ></div>
       </div>
-      <div className="flex flex-wrap-gap-2">{tagList}</div>
+
+      {/* Tags */}
+      <div className="flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <span
+            key={tag}
+            className="inline-block px-2 py-2 text-xs font-semibold rounded-full"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
 
       {/* Modal */}
       <Modal isOpen={isModalOpen} onClose={closeModal} imageSrc={imageSrc} />

@@ -1,12 +1,14 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction, LoaderFunction } from "@remix-run/node";
 import Profile from "~/components/Profile";
 import Skills from "~/components/Skills";
 import Socials from "~/components/Socials";
 import Me from "/me.png";
 import About from "~/components/About";
+import { sql } from "~/db.server";
+import Projects from "~/components/Projects";
+import { useLoaderData } from "@remix-run/react";
 // import Experience from "~/components/Experience";
 
-const wip = false;
 export const meta: MetaFunction = () => {
   return [
     { title: "Alex Herrera | Developer" },
@@ -17,7 +19,31 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+export const loader: LoaderFunction = async () => {
+  const projects = await sql`
+    SELECT
+      title, description, tags::text[], images::text[], alt, repo_link,
+      TO_CHAR(date, 'DD Month YYYY') AS date
+    FROM project
+    LIMIT 3  -- optional: show only a few on homepage
+  `;
+
+  return {
+    projects: projects.map((p) => ({
+      title: p.title,
+      description: p.description,
+      tags: p.tags,
+      images: p.images,
+      alt: p.alt,
+      repo_link: p.repo_link,
+      date: p.date,
+    })),
+  };
+};
+
 export default function Index() {
+  const { projects } = useLoaderData<{ projects: any[] }>();
+
   return (
     <div className="">
       <Profile
@@ -29,18 +55,9 @@ export default function Index() {
       />
       <Socials />
       <About />
-      {/*
-      <Experience />
-      */}
-
-      {/*wip flag*/}
-      {wip ? (
-        <p className="text-center bg-yellow-200">SITE IN CONSTRUCTION</p>
-      ) : (
-        <br />
-      )}
-
+      {/* <Experience /> */}
       <Skills />
+      <Projects projects={projects} />
     </div>
   );
 }

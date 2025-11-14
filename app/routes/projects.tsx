@@ -1,9 +1,7 @@
-import type { MetaFunction } from "@remix-run/node";
-import ProjectCard from "~/components/ProjectCard";
-import { sql } from "~/db.server";
-import { json } from "@remix-run/node";
+import type { MetaFunction, LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import DOMPurify from "dompurify";
+import { sql } from "~/db.server";
+import Projects from "~/components/Projects"; // ← now a real component
 
 type ProjectResponse = {
   title: string;
@@ -15,7 +13,7 @@ type ProjectResponse = {
   date: string;
 };
 
-export const loader = async () => {
+export const loader: LoaderFunction = async () => {
   const projects = await sql`
     SELECT
       title,
@@ -28,7 +26,7 @@ export const loader = async () => {
     FROM project
   `;
 
-  const response: ProjectResponse[] = projects.map((project) => ({
+  return projects.map((project) => ({
     title: project.title,
     description: project.description,
     tags: project.tags,
@@ -37,8 +35,6 @@ export const loader = async () => {
     repo_link: project.repo_link,
     date: project.date,
   }));
-
-  return response;
 };
 
 export const meta: MetaFunction = () => {
@@ -48,30 +44,7 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export default function Projects() {
+export default function ProjectsRoute() {
   const projects = useLoaderData<ProjectResponse[]>();
-  return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1 className="text-3xl font-bold underline">Projects</h1>
-      {projects.length === 0 ? (
-        <p className="text-lg">No projects found.</p>
-      ) : (
-        <div className="m-2">
-          {projects.map((project, index) => (
-            <div key={index}>
-              <ProjectCard
-                header={project.title}
-                content={project.description}
-                imageSrc={project.images[0]}
-                alt={project.alt}
-                date={project.date}
-                repoLink={project.repo_link}
-                tags={project.tags}
-              />
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
+  return <Projects projects={projects} />;
 }

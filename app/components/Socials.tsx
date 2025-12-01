@@ -7,7 +7,6 @@ export default function Socials() {
   return (
     <div className="max-w-lg flex justify-center gap-4 mb-4 mx-auto">
       <LinkedinButton /> <GitHubButton /> <EmailButton />
-      <CurriculumVitaeButton />
     </div>
   );
 }

@@ -17,6 +17,7 @@ import {
 import { darkSessionResolver } from "./utils/session.server";
 import Navbar from "./components/Navbar";
 import { ParticlesBackground } from "./components/ParticlesBackground";
+import { defaultSeo } from "./components/Seo";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -30,6 +31,9 @@ export async function loader({ request }: LoaderFunctionArgs) {
     theme: getTheme(),
   };
 }
+// meta data and SEO
+export const meta = defaultSeo;
+
 export default function AppWithProvider() {
   const { theme } = useLoaderData<typeof loader>();
   return (

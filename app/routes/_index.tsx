@@ -25,7 +25,7 @@ export const loader: LoaderFunction = async () => {
       title, description, tags::text[], images::text[], alt, repo_link,
       TO_CHAR(date, 'DD Month YYYY') AS date
     FROM project
-    LIMIT 3  -- optional: show only a few on homepage
+    LIMIT 4  -- optional: show only a few on homepage
   `;
 
   return {

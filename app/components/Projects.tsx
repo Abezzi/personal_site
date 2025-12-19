@@ -27,7 +27,7 @@ export default function Projects({ projects }: ProjectsProps) {
               <ProjectCard
                 header={project.title}
                 content={project.description}
-                imageSrc={project.images[0]}
+                imageSrcs={project.images}
                 alt={project.alt}
                 date={project.date}
                 repoLink={project.repo_link}

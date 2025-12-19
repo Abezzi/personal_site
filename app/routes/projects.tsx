@@ -1,7 +1,7 @@
 import type { MetaFunction, LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { sql } from "~/db.server";
-import Projects from "~/components/Projects"; // ← now a real component
+import Projects from "~/components/Projects";
 
 type ProjectResponse = {
   title: string;

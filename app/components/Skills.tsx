@@ -10,14 +10,15 @@ type SkillAndLevel = {
 };
 
 const languages: SkillAndLevel[] = [
+  { skill: "VueJS", level: ADVANCED },
+  { skill: "Typescript", level: ADVANCED },
+  { skill: "Javascript", level: ADVANCED },
+  { skill: "NodeJS", level: ADVANCED },
+  { skill: "React", level: ADVANCED },
   { skill: "C/C++", level: ADVANCED },
   { skill: "Python", level: ADVANCED },
-  { skill: "React", level: ADVANCED },
   { skill: "Go", level: INTERMEDIATE },
   { skill: "PHP", level: INTERMEDIATE },
-  { skill: "Typescript", level: INTERMEDIATE },
-  { skill: "Javascript", level: INTERMEDIATE },
-  { skill: "NodeJS", level: INTERMEDIATE },
   { skill: "Java", level: BEGINNER },
   { skill: "Rust", level: BEGINNER },
 ];

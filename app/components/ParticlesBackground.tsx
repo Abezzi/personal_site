@@ -19,31 +19,45 @@ export const ParticlesBackground = () => {
   const options = useMemo<ISourceOptions>(
     () => ({
       background: { color: { value: "transparent" } },
-      fpsLimit: 120,
+      fpsLimit: 30,
       interactivity: {
+        detectsOn: "canvas",
         events: {
-          onHover: { enable: true, mode: "repulse" },
           resize: { enable: true },
         },
-        modes: { repulse: { distance: 100, duration: 0.4 } },
       },
       particles: {
-        color: { value: "#94a3b8" },
-        links: { color: "#94a3b8", distance: 150, enable: true, opacity: 0.2 },
-        move: {
-          enable: true,
-          speed: 1,
-          direction: "none" as const,
-          random: false,
-          straight: false,
-          outModes: { default: "bounce" as const },
+        color: { value: "#bdbdbd" },
+        number: {
+          density: {
+            enable: true,
+            area: 1080,
+          },
+          value: 400,
         },
-        number: { density: { enable: true, area: 800 }, value: 80 },
-        opacity: { value: 0.3 },
+        opacity: {
+          animation: {
+            enable: true,
+            minimumValue: 0.05,
+            speed: 0.25,
+            sync: false,
+          },
+          random: {
+            enable: true,
+            minimumValue: 0.05,
+          },
+          value: 1,
+        },
         shape: { type: "circle" as const },
-        size: { value: { min: 1, max: 3 } },
+        size: {
+          random: {
+            enable: true,
+            minimumValue: 0.5,
+          },
+          value: 1,
+        },
       },
-      detectRetina: true,
+      detectRetina: false,
     }),
     []
   );

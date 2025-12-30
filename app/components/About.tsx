@@ -6,8 +6,8 @@ export default function About() {
       </h1>
       <div className="text-justify text-xl font-sans dark:text-white text-slate-800">
         <p>
-          My name is Alex Herrera Saravia. I'm a full-stack developer and app
-          developer enthusiast from Chile. I'm passionate about music,
+          My name is Alex Herrera Saravia. I'm a full-stack web developer and
+          app developer enthusiast from Chile. I'm passionate about music,
           technology and health.
         </p>
         <p>
